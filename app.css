@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+/*  font-family: "Caprasimo", serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@900&display=swap');
+/* font-family: 'Noto Sans Display', sans-serif;  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+
+
+body{
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+
+@media (max-width: 1150px) {
+  body {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+
+
+
+
+h2{
+  font-family: "Caprasimo", serif;
+  font-size: 40px;
+color:rgb(180, 79, 150)
+}
+
+.nav-link {
+  /* Vos styles personnalisés ici */
+  text-decoration: none; /* Pour supprimer le soulignement par défaut des liens */
+  color: #333; /* Couleur du texte */
+  font-weight: bold; /* Gras */
+  padding: 10px 20px; /* Espacement intérieur */
+  background-color: #f0f0f0; /* Couleur de fond */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s; /* Transition de couleur de fond pour l'interaction utilisateur */
+  margin-right: 50px;
+}
+
+
+.nav-link:hover {
+  background-color: #ddd; /* Changement de couleur de fond au survol */
+}

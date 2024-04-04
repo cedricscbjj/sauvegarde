@@ -1,17 +1,16 @@
-
-
-import './App.css';
-
 import React, { useState } from 'react';
 import axios from 'axios';
+import './index.css';
+
 
 const Getspecificdata = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:3405/datalinks?theme1=${searchTerm}`);
+      const response = await axios.get(`http://localhost:3000/datalinks?theme1=${searchTerm}`);
       const data = response.data;
       setSearchResults(data);
     } catch (error) {
@@ -19,31 +18,30 @@ const Getspecificdata = () => {
     }
   };
 
+
+
+
+
   return (
-    <div   id="specific">
+    <div class="container">
+
+<h1>Getspecificdata</h1>
 
 
-<h1>Liste des tag theme1</h1>
-
+<p>Pour créer une liste en React, vous pouvez utiliser la fonction map() pour parcourir un tableau de données et renvoyer un élément JSX pour chaque élément du tableau. Voici un exemple simple de création d'une liste de noms :</p>
 <ul>
-    <li>covid</li>
-    <li>ingerence</li>
-    <li>lgbt</li>
-    <li>woke</li>
-    <li>manipulation</li>
-    <li>israel</li>
-    <li>islam</li>
-    <li>zetetique</li>
-    <li>juif</li>
-    <li>nwo</li>
-    <li>metissage</li>
-    <li>twitter</li>
-    <li>p3d0</li>
+    <li>poney</li>
+<li>chaton</li>
+<li>fourmi</li>
+<li>renard</li>
+<li>dinosaure</li>
+<li>lapin</li>
 </ul>
 
 
 
-      <input
+
+<input
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
@@ -63,26 +61,13 @@ const Getspecificdata = () => {
           ))}
         </div>
       )}
+
+
+
+
+
+
     </div>
-  );
-};
-
-export default Getspecificdata;
-
-
-/* <ul>
-    <li>covid</li>
-    <li>ingerence</li>
-    <li>lgbt</li>
-    <li>woke</li>
-    <li>manipulation</li>
-    <li>israel</li>
-    <li>islam</li>
-    <li>zetetique</li>
-    <li>juif</li>
-    <li>nwo</li>
-    <li>metissage</li>
-    <li>twitter</li>
-    <li>p3d0</li>
-</ul>
-*/
+  )
+}
+export default Getspecificdata

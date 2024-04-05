@@ -1,5 +1,6 @@
 const express = require('express')
 const Datalink = require('./datamodel')
+require('dotenv').config();
 
 const app = express()
 const port = 3000
@@ -134,27 +135,18 @@ app.delete('/datalinks/:id' , async (req, res) => {
   
 
     
-   /* mongoose.connect('mongodb+srv://csaintcharlescsc:yIvtA6iBQL7T1zpa@sauvegarde.iorkpxl.mongodb.net/?retryWrites=true&w=majority')
-.then(() => {
-  app.listen(port, () => {
-    console.log(`on ecoute ce qui se passe sur ${port}`)
-  }) 
-console.log('connected to mongodb')})
-.catch(() => {
-console.log(error)
-}) */
-mongoose
-  .connect('mongodb+srv://csaintcharlescsc:yIvtA6iBQL7T1zpa@sauvegarde.iorkpxl.mongodb.net/?retryWrites=true&w=majority')
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`on ecoute ce qui se passe sur ${port}`)
-    });
-    console.log('connected to mongodb');
-  })
-  .catch((error) => {
-    console.log(error);
-  });
 
+mongoose
+ .connect(process.env.MONGODB_URI)
+ .then(() => {
+   app.listen(port, () => {
+     console.log(`on ecoute ce qui se passe sur ${port}`)
+   });
+   console.log('connected to mongodb');
+ })
+ .catch((error) => {
+   console.log(error);
+ });
 
 
 
